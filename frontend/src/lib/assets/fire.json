@@ -1,0 +1,114 @@
+{
+	"lifetime": {
+		"min": 0.2,
+		"max": 0.8
+	},
+	"frequency": 0.01,
+	"emitterLifetime": -1,
+	"maxParticles": 50,
+	"addAtBack": true,
+	"pos": {
+		"x": 0,
+		"y": 0
+	},
+	"behaviors": [
+		{
+			"type": "alpha",
+			"config": {
+				"alpha": {
+					"list": [
+						{
+							"time": 0,
+							"value": 1
+						},
+						{
+							"time": 1,
+							"value": 0
+						}
+					]
+				}
+			}
+		},
+		{
+			"type": "moveSpeed",
+			"config": {
+				"speed": {
+					"list": [
+						{
+							"time": 0,
+							"value": 100
+						},
+						{
+							"time": 1,
+							"value": 10
+						}
+					]
+				},
+				"minMult": 1
+			}
+		},
+		{
+			"type": "scale",
+			"config": {
+				"scale": {
+					"list": [
+						{
+							"time": 0,
+							"value": 0.5
+						},
+						{
+							"time": 1,
+							"value": 0.01
+						}
+					]
+				},
+				"minMult": 0.5
+			}
+		},
+		{
+			"type": "color",
+			"config": {
+				"color": {
+					"list": [
+						{
+							"time": 0,
+							"value": "#f56200"
+						},
+						{
+							"time": 1,
+							"value": "#262626"
+						}
+					]
+				}
+			}
+		},
+		{
+			"type": "rotation",
+			"config": {
+				"accel": 0,
+				"minSpeed": -3,
+				"maxSpeed": 0,
+				"minStart": 230,
+				"maxStart": 300
+			}
+		},
+		{
+			"type": "blendMode",
+			"config": {
+				"blendMode": "overlay"
+			}
+		},
+		{
+			"type": "textureRandom",
+			"config": {
+				"textures": [
+					"/src/lib/assets/particle.png"
+				]
+			}
+		},
+		{
+			"type": "spawnPoint",
+			"config": {}
+		}
+	]
+}

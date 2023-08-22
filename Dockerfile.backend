@@ -1,0 +1,14 @@
+FROM python:3.11-slim AS development
+
+RUN apt-get update && apt-get install -y build-essential
+
+WORKDIR /workspace/backend
+
+COPY ./backend/requirements.in .
+COPY ./backend/start_backend.sh .
+
+# fix line breaks and permissions for start.sh if touched in Windows
+RUN sed -i 's/\r$//' ./start_backend.sh  && chmod +x ./start_backend.sh
+
+RUN python -m pip install --upgrade pip
+RUN pip install setuptools wheel pip-tools

@@ -1,0 +1,18 @@
+{
+  "name": "simulation-engine",
+  "collaborators": [
+    "cbalona <caesar.balona@gmail.com>"
+  ],
+  "version": "0.1.0",
+  "files": [
+    "simulation_engine_bg.wasm",
+    "simulation_engine.js",
+    "simulation_engine.d.ts"
+  ],
+  "module": "simulation_engine.js",
+  "types": "simulation_engine.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ],
+  "type": "module"
+}

@@ -1,0 +1,19 @@
+FROM node:20-alpine as development
+
+# RUN apk add --no-cache shadow
+
+# # set user
+# USER node
+
+WORKDIR /workspace/frontend
+
+COPY ./frontend/package.json .
+COPY ./frontend/yarn*.lock .
+COPY ./frontend/start_frontend.sh .
+
+RUN yarn install
+
+# fix line breaks and permissions for start.sh if touched in Windows
+RUN sed -i 's/\r$//' ./start_frontend.sh  && chmod +x ./start_frontend.sh
+
+ENV VITE_API_URL=http://localhost:8080/api
