@@ -1,6 +1,15 @@
 About Insurance Automata
 ========================
 
+<p align="center">
+  <img src="assets/readme-screen.png" alt="Insurance Automata" width="600"/>
+</p>
+
+<!-- centered link -->
+<p align="center">
+  <a href="https://insurance-automata.com">https://insurance-automata.com</a>
+</p>
+
 Insurance Automata is an interactive application that simulates the
 spread of fire across a house using a cellular automata model. The app
 allows users to place objects within a virtual house and observe how a
