@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Cell } from '$lib/classes/Cell';
 	import { Label, Fileupload } from 'flowbite-svelte';
-	import { designingInitialStateStore, gridStore } from '$lib/store';
+	import { designingInitialStateStore, gridStore, numSimsStore } from '$lib/store';
 	import { importGridState, exportGridState } from '$lib/utils/io';
 
 	const baseButton: string =
@@ -63,8 +63,6 @@
 		}
 	}
 
-
-
 	$: {
 		gridStore.update((grid) => {
 			grid[0][0] = grid[0][0];
@@ -93,5 +91,9 @@
 	<div class="flex flex-col">
 		<Label class="pb-2 mb-2 underline underline-offset-4">Upload Floorplan</Label>
 		<Fileupload {...fileuploadprops} on:change={onFileChange} inputClass="border !p-0 text-xs" />
+	</div>
+	<div class="flex flex-col mt-6">
+		<Label class="pb-2 mb-2 underline underline-offset-4">Bulk Simulations</Label>
+		<input type="number" class="rounded" bind:value={$numSimsStore} min="0" />
 	</div>
 </div>

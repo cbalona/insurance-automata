@@ -7,7 +7,10 @@
 		designingInitialStateStore,
 		saveDesignState,
 		stepStore,
-		simulationPendingStore
+		simulationPendingStore,
+
+		numSimsStore
+
 	} from '$lib/store';
 	import { simulationEngine } from '$lib/classes/SimulationEngine';
 	import { emptyGrid } from '$lib/constants';
@@ -83,7 +86,7 @@
 			{/if}
 		</Button>
 		<Button
-			on:click={() => runSimulation(10)}
+			on:click={() => runSimulation($numSimsStore)}
 			disabled={simulationRunning}
 			color="red"
 			class="mr-2 w-24"
@@ -91,7 +94,7 @@
 			{#if simulationRunning}
 				{queuedSimNumber}
 			{:else}
-				Run x10
+				Run x{$numSimsStore}
 			{/if}
 		</Button>
 	{/if}

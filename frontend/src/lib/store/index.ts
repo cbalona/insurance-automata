@@ -5,7 +5,7 @@ import {
 	selectedItemStore,
 	igniteCellsStore
 } from './paletteStore';
-import { stepStore, simulationRunningStore, simulationPendingStore } from './simulationStore';
+import { stepStore, simulationRunningStore, simulationPendingStore, numSimsStore } from './simulationStore';
 import { simLogStore } from './simulationStore';
 import {
 	gridStore,
@@ -31,6 +31,7 @@ export {
 	stepStore,
 	simulationRunningStore,
 	simulationPendingStore,
+	numSimsStore,
 	simLogStore,
 	designingInitialStateStore,
 	gridStore,

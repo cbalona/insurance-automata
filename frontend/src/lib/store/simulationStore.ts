@@ -5,5 +5,5 @@ import type { Writable } from 'svelte/store';
 export const stepStore: Writable<number> = writable(0);
 export const simulationPendingStore: Writable<boolean> = writable(true);
 export const simulationRunningStore: Writable<boolean> = writable(false);
-
+export const numSimsStore: Writable<number> = writable(10);
 export const simLogStore: Writable<SimulationLog[]> = writable([]);
