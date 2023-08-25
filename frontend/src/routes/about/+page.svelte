@@ -1,12 +1,3 @@
-<script>
-	import Interesting from '$lib/components/prose/Interesting.svelte';
-	import TableOfContents from '$lib/components/prose/TableOfContents.svelte';
-	import Learned from '$lib/components/prose/Learned.svelte';
-	import { onMount } from 'svelte';
-	import Chart from 'chart.js/auto';
-	import Katex from '$lib/components/Katex.svelte';
-</script>
-
 <svelte:head>
 	<title>About</title>
 </svelte:head>

@@ -10,7 +10,15 @@
 
 <div class="flex flex-col items-center">
 	<article class="prose lg:prose-xl prose-slate mx-auto prose-img:m-0 mb-6">
-		<p>Insurance Automata was built by Caesar Balona for the 2023 CAS Hacktuary</p>
+		<p>
+			Insurance Automata was built by <a href="https://www.linkedin.com/in/cbalona/"
+				>Caesar Balona</a
+			>
+			for the
+			<a href="https://www.casact.org/article/2023-cas-hacktuary-challenge-hack-back"
+				>2023 CAS Hacktuary.</a
+			>
+		</p>
 	</article>
 
 	<div
@@ -38,7 +46,10 @@
 					</a>
 				</li>
 				<li>
-					<a href="https://github.com/cbalona" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+					<a
+						href="https://github.com/cbalona"
+						class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+					>
 						<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"
 							><path
 								fill-rule="evenodd"
